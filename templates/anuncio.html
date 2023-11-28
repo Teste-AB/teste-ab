@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Compra de TV</title>
+
+  
+  <style>
+    /* Estilos Base */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    .product-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .product-image {
+      width: 100%;
+      max-width: 300px;
+    }
+    .product-info {
+      text-align: center;
+    }
+    .product-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .product-price {
+      font-size: 28px;
+      color: #e44d26;
+    }
+    .checkout-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 14px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-card">
+      <img src="../static/img/Purple Smart TV Promo Instagram Post.png" alt="TV" class="product-image">
+      <div class="product-info">
+        <h2 class="product-title">Smart TV 4K 55 Polegadas</h2>
+        <p class="product-description">Descrição detalhada do produto aqui.</p>
+        <p class="product-price">R$ 2.999,00</p>
+        <form action="/registrar_compra" method="post">
+            <input type="hidden" name="email" value="{{ email }}">
+            <button type="submit" class="checkout-button">Comprar agora</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
