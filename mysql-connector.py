@@ -5,7 +5,7 @@ import random
 # Configuração do banco de dados
 config = {
     'user': 'root',
-    'password': 'root',
+    'password': 'fatec',
     'host': 'localhost',
     'database': 'metrica_AB',
     'raise_on_warnings': True

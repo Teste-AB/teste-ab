@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Venda de TV</title>
+  <style>
+    /* Estilos Base */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 800px; /* Reduzi o max-width para melhor ajustar à tela */
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .product-card {
+      background-color: #3f51b5;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 20px; /* Reduzi o padding para diminuir o tamanho do cartão */
+      color: white;
+    }
+    .product-image {
+      width: 100%;
+      max-width: 300px; /* Reduzi o max-width da imagem */
+      border-radius: 8px;
+    }
+    .product-title {
+      font-size: 28px; /* Reduzi o tamanho do título */
+      margin-top: 10px;
+    }
+    .product-description {
+      font-size: 20px; /* Reduzi o tamanho da descrição */
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .product-price {
+      font-size: 36px; /* Reduzi o tamanho do preço */
+      color: #f48fb1;
+      margin-bottom: 20px;
+    }
+    .checkout-button {
+      background-color: #d86f69;
+      color: white;
+      padding: 14px 20px;
+      margin: 14px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+    }
+    .buy-button:hover {
+      background-color: #ff00ee;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-card">
+      <img src="../static/img/Dia da Televisão Tv Post Instagram.png" alt="TV" class="product-image">
+      <h2 class="product-title">TV Exclusiva Ultra HD 4K 75 Polegadas</h2>
+      <p class="product-description">Leve para casa a revolução da tecnologia de entretenimento.</p>
+      <p class="product-price">R$ 6.499,00</p>
+      <form action="/registrar_compra" method="post">
+        <input type="hidden" name="email" value="{{ email }}">
+        <button type="submit" class="checkout-button">Finalizar Compra</button>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
